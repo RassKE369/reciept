@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Olesegere House Receipt</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="react.js" differ></script>
+</head>
+<body>
+  <div class="receipt" id="receipt">
+    <div class="center">
+      <h3>Ole-segere Homes</h3>
+      <p> <img alt="[LOGO HERE]" src="https://www.mfanoboraafrica.com/assets/images/logo.png" width="80">.</p>   
+      <h4>RECEIPT</h4>
+    </div>
+
+    <p>Tenant Name: <input type="text" id="tenantName"></p>
+    <p>House No.: <input type="text" id="houseNo"></p>
+    <p>Tel: <input type="text" id="phone"></p>
+
+    <hr>
+
+    <div class="row">
+      <strong>Description</strong>
+      <strong>Amount</strong>
+    </div>
+    <div class="row">
+      <span>RENT PAYMENT</span>
+      <span><input type="text" id="amount" style="width:80px;"></span>
+    </div>
+
+    <p>Payment Mode: 
+      <select id="paymentMode">
+        <option value="">Select</option>
+        <option value="Cash">Cash</option>
+        <option value="Cheque">Cheque</option>
+      </select>
+    </p>
+
+    <p>Rental Balance: <input type="text" id="balance"></p>
+
+    <p>Prepared by: <strong>Vivian</strong></p>
+    <p>Date Printed: <input type="date" id="datePrinted"></p>
+
+    <hr>
+
+    <div class="note">
+      Thank you for promptly settling your bills.<br>
+      We appreciate your support and are glad to continue serving you.
+    </div>
+  </div>
+
+  <div class="actions">
+    <button onclick="window.print()">Print Receipt</button>
+    <button onclick="downloadPDF()">Download PDF</button>
+    <!-- Google Sheets submission can go here -->
+  </div>
+</body>
+</html>
